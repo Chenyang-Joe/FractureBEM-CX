@@ -45,6 +45,7 @@ run
 bt
 ```
 Or try ```bunny_mat_run.sh``` which shows the same error.
+Note: all the .sh files are transferred from the .bat file by myself manually, in order to run in the linux.
 
 
 # Debug Info
