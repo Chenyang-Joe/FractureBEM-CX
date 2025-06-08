@@ -50,7 +50,7 @@ Or try ```bunny_mat_run.sh``` which shows the same error.
 # Debug Info
 According to the debug info #5, the elem = 4294966437 in FractureSim::FractureBEM::checkDistanceEl. It seems that signed-to-unsigned conversion happens to "elem" somewhere, so elem has such a big value. e.g. -155 -> 4294966437. When I run bunny_mat_run.sh, it also shows the same type of error.
 
-
+```bash
 (gdb) bt
 #0  0x00005555559f3564 in std::less<unsigned int>::operator() (this=0x7fffffffd028, __x=@0x5555564aa8a0: 127, __y=<error reading variable>)
     at /usr/include/c++/8/bits/stl_function.h:386
@@ -66,3 +66,4 @@ According to the debug info #5, the elem = 4294966437 in FractureSim::FractureBE
     at /app/src/FractureBEM.cpp:562
 #6  0x0000555555a000d6 in FractureSim::FractureBEM::seedCracksAndPropagate (this=0x7fffffffd020, maxSeed=17) at /app/src/FractureBEM.cpp:234
 #7  0x00005555559e49e8 in main (argc=32, argv=0x7fffffffeb88) at /app/src/main.cpp:218
+```
