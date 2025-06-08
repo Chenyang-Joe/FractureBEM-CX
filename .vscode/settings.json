@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "peusocode nodes": "xsl",
+        "map": "cpp"
+    }
+}
